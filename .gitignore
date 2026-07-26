@@ -1,0 +1,44 @@
+cat << 'EOF' >> .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Logs
+*.log
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Models
+trained_models/
+
+# Outputs
+outputs/
+
+# Large datasets
+datasets/raw/
+datasets/processed/
+
+# OS
+.DS_Store
+Thumbs.db
+EOF
