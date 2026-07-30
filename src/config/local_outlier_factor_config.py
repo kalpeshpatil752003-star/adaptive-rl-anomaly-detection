@@ -61,4 +61,10 @@ class LocalOutlierFactorConfig:
 
     novelty: bool = True
 
+
+    random_state: int = 42
+
     n_jobs: int = -1
+
+    max_training_samples: int = 100000
+

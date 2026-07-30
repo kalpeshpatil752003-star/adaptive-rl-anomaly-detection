@@ -3,8 +3,8 @@
 ## 📊 Project Information
 
 - **Project Name**: `adaptive_rl_anomaly_detection`
-- **Generated On**: 2026-07-26 15:46:55 (Asia/Calcutta / GMT+06:30)
-- **Total Files Processed**: 93
+- **Generated On**: 2026-07-30 15:43:06 (Asia/Calcutta / GMT+06:30)
+- **Total Files Processed**: 102
 - **Export Tool**: Easy Whole Project to Single Text File for LLMs v1.1.0
 - **Tool Author**: Jota / José Guilherme Pandolfi
 
@@ -47,12 +47,14 @@
 │       └── 📄 Wednesday-workingHours.pcap_ISCX.csv (214.74 MB)
 ├── 📁 docs/
 ├── 📁 logs/
-│   └── 📄 framework.log (62.16 KB)
+│   └── 📄 framework.log (117.21 KB)
 ├── 📁 notebooks/
 │   ├── 📁 logs/
 │   │   └── 📄 framework.log (447 B)
 │   ├── 📁 trained_models/
-│   │   └── 📄 isolation_forest.joblib (1.46 MB)
+│   │   ├── 📄 isolation_forest.joblib (1.46 MB)
+│   │   ├── 📄 local_outlier_factor.joblib (70.19 MB)
+│   │   └── 📄 one_class_svm.joblib (1.39 MB)
 │   ├── 📄 01_test_config.ipynb (2.72 KB)
 │   ├── 📄 02_test_seed.ipynb (1.46 KB)
 │   ├── 📄 03_test_logger.ipynb (1.33 KB)
@@ -68,8 +70,9 @@
 │   ├── 📄 13_test_dimensionality_reduction.ipynb (6.49 KB)
 │   ├── 📄 14_test_feature_pipeline.ipynb (6.06 KB)
 │   ├── 📄 15_base_model.ipynb (1.58 KB)
-│   ├── 📄 16_Isolation_Forest.ipynb (26.17 KB)
-│   └── 📄 17_local_outlier_factor.ipynb.ipynb (607 B)
+│   ├── 📄 16_Isolation_Forest.ipynb (26.16 KB)
+│   ├── 📄 17_local_outlier_factor.ipynb.ipynb (18.66 KB)
+│   └── 📄 18_one_class_svm.ipynb (22.09 KB)
 ├── 📁 outputs/
 │   ├── 📁 figures/
 │   ├── 📁 history/
@@ -82,13 +85,16 @@
 │   │   └── 📄 __init__.cpython-312.pyc (163 B)
 │   ├── 📁 config/
 │   │   ├── 📁 __pycache__/
-│   │   │   ├── 📄 __init__.cpython-312.pyc (274 B)
+│   │   │   ├── 📄 __init__.cpython-312.pyc (361 B)
 │   │   │   ├── 📄 config.cpython-312.pyc (5.39 KB)
-│   │   │   └── 📄 isolation_forest_config.cpython-312.pyc (1.08 KB)
+│   │   │   ├── 📄 isolation_forest_config.cpython-312.pyc (1.08 KB)
+│   │   │   ├── 📄 local_outlier_factor_config.cpython-312.pyc (1.96 KB)
+│   │   │   └── 📄 one_class_svm_config.cpython-312.pyc (1.16 KB)
 │   │   ├── 📄 __init__.py (202 B)
 │   │   ├── 📄 config.py (4.25 KB)
 │   │   ├── 📄 isolation_forest_config.py (495 B)
-│   │   └── 📄 local_outlier_factor_config.py.py (1.26 KB)
+│   │   ├── 📄 local_outlier_factor_config.py (1.33 KB)
+│   │   └── 📄 one_class_svm_config.py (528 B)
 │   ├── 📁 ensemble/
 │   │   └── 📄 __init__.py
 │   ├── 📁 evaluation/
@@ -109,16 +115,18 @@
 │   │   └── 📄 statistical_features.py (1.53 KB)
 │   ├── 📁 models/
 │   │   ├── 📁 __pycache__/
-│   │   │   ├── 📄 __init__.cpython-312.pyc (436 B)
+│   │   │   ├── 📄 __init__.cpython-312.pyc (477 B)
 │   │   │   ├── 📄 base_model.cpython-312.pyc (7.37 KB)
-│   │   │   └── 📄 isolation_forest.cpython-312.pyc (6.6 KB)
-│   │   ├── 📄 __init__.py (311 B)
+│   │   │   ├── 📄 isolation_forest.cpython-312.pyc (6.6 KB)
+│   │   │   ├── 📄 local_outlier_factor.cpython-312.pyc (6.26 KB)
+│   │   │   └── 📄 one_class_svm.cpython-312.pyc (6.44 KB)
+│   │   ├── 📄 __init__.py (315 B)
 │   │   ├── 📄 autoencoder.py
 │   │   ├── 📄 base_model.py (5.88 KB)
 │   │   ├── 📄 isolation_forest.py (4.2 KB)
-│   │   ├── 📄 local_outlier_factor.py (3 KB)
+│   │   ├── 📄 local_outlier_factor.py (4.1 KB)
 │   │   ├── 📄 model_factory.py
-│   │   └── 📄 one_class_svm.py
+│   │   └── 📄 one_class_svm.py (4.25 KB)
 │   ├── 📁 pipelines/
 │   │   └── 📄 __init__.py
 │   ├── 📁 preprocessing/
@@ -151,6 +159,7 @@
 │   │   └── 📄 __init__.py
 │   └── 📄 __init__.py
 ├── 📁 tests/
+├── 📄 nohup.out (2.73 KB)
 ├── 📄 pyproject.toml (344 B)
 ├── 📄 README.md
 ├── 📄 requirements.txt
@@ -169,7 +178,8 @@
 - [📄 src/config/__init__.py](#📄-src-config-init-py)
 - [📄 src/config/config.py](#📄-src-config-config-py)
 - [📄 src/config/isolation_forest_config.py](#📄-src-config-isolation-forest-config-py)
-- [📄 src/config/local_outlier_factor_config.py.py](#📄-src-config-local-outlier-factor-config-py-py)
+- [📄 src/config/local_outlier_factor_config.py](#📄-src-config-local-outlier-factor-config-py)
+- [📄 src/config/one_class_svm_config.py](#📄-src-config-one-class-svm-config-py)
 - [📄 src/ensemble/__init__.py](#📄-src-ensemble-init-py)
 - [📄 src/evaluation/__init__.py](#📄-src-evaluation-init-py)
 - [📄 src/feature_engineering/__init__.py](#📄-src-feature-engineering-init-py)
@@ -210,24 +220,25 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Files | 93 |
+| Total Files | 102 |
 | Total Directories | 42 |
-| Text Files | 42 |
-| Binary Files | 51 |
-| Total Size | 845.4 MB |
+| Text Files | 43 |
+| Binary Files | 59 |
+| Total Size | 917.1 MB |
 
 ### 📄 File Types Distribution
 
 | Extension | Count |
 |-----------|-------|
-| `.py` | 33 |
-| `.pyc` | 23 |
-| `.ipynb` | 17 |
+| `.py` | 34 |
+| `.pyc` | 27 |
+| `.ipynb` | 18 |
 | `.csv` | 9 |
 | `.txt` | 4 |
+| `.joblib` | 3 |
 | `.log` | 2 |
 | `no extension` | 1 |
-| `.joblib` | 1 |
+| `.out` | 1 |
 | `.toml` | 1 |
 | `.md` | 1 |
 | `.sh` | 1 |
@@ -331,15 +342,15 @@ The following files were not included in the text content:
 ### <a id="📄-logs-framework-log"></a>📄 `logs/framework.log`
 
 **File Info:**
-- **Size**: 62.16 KB
+- **Size**: 117.21 KB
 - **Extension**: `.log`
 - **Language**: `text`
 - **Location**: `logs/framework.log`
 - **Relative Path**: `logs`
-- **Created**: 2026-07-26 15:27:13 (Asia/Calcutta / GMT+06:30)
-- **Modified**: 2026-07-26 15:27:13 (Asia/Calcutta / GMT+06:30)
-- **MD5**: `7192c20138be009ee9305cb61ad18491`
-- **SHA256**: `db45858eae4c9b24ec3038e273cb962445e15c080cf2ee895624c556f60ad6dc`
+- **Created**: 2026-07-30 15:14:16 (Asia/Calcutta / GMT+06:30)
+- **Modified**: 2026-07-30 15:14:16 (Asia/Calcutta / GMT+06:30)
+- **MD5**: `90ac4dfa3969dbef1061c098abe525d5`
+- **SHA256**: `d40579705dee5e118c57521a5f5a4a00d5b8e670a76c6814a385ab1306e5e5d6`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -973,6 +984,503 @@ The following files were not included in the text content:
 2026-07-26 15:26:07 | INFO     | src.models.isolation_forest | Isolation Forest training completed.
 2026-07-26 15:27:09 | INFO     | src.models.isolation_forest | Isolation Forest loaded <- trained_models/isolation_forest.joblib
 2026-07-26 15:27:13 | INFO     | src.models.isolation_forest | Isolation Forest loaded <- trained_models/isolation_forest.joblib
+2026-07-28 14:20:09 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 14:20:09 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Monday-WorkingHours.pcap_ISCX.csv
+2026-07-28 14:20:12 | INFO     | AdaptiveRL | Loaded Monday-WorkingHours.pcap_ISCX.csv | Shape=(529918, 79)
+2026-07-28 14:20:12 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv completed in 2.7824 seconds.
+2026-07-28 14:20:12 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 14:20:12 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Tuesday-WorkingHours.pcap_ISCX.csv
+2026-07-28 14:20:14 | INFO     | AdaptiveRL | Loaded Tuesday-WorkingHours.pcap_ISCX.csv | Shape=(445909, 79)
+2026-07-28 14:20:14 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv completed in 2.1300 seconds.
+2026-07-28 14:20:14 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv started.
+2026-07-28 14:20:14 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Wednesday-workingHours.pcap_ISCX.csv
+2026-07-28 14:20:17 | INFO     | AdaptiveRL | Loaded Wednesday-workingHours.pcap_ISCX.csv | Shape=(692703, 79)
+2026-07-28 14:20:17 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv completed in 3.3604 seconds.
+2026-07-28 14:20:17 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv started.
+2026-07-28 14:20:17 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv
+2026-07-28 14:20:18 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv | Shape=(170366, 79)
+2026-07-28 14:20:18 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv completed in 0.6871 seconds.
+2026-07-28 14:20:18 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv started.
+2026-07-28 14:20:18 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv
+2026-07-28 14:20:19 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv | Shape=(288602, 79)
+2026-07-28 14:20:19 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv completed in 1.0482 seconds.
+2026-07-28 14:20:19 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv started.
+2026-07-28 14:20:19 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Morning.pcap_ISCX.csv
+2026-07-28 14:20:20 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Morning.pcap_ISCX.csv | Shape=(191033, 79)
+2026-07-28 14:20:20 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv completed in 0.8197 seconds.
+2026-07-28 14:20:20 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv started.
+2026-07-28 14:20:20 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+2026-07-28 14:20:21 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv | Shape=(286467, 79)
+2026-07-28 14:20:21 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv completed in 1.2202 seconds.
+2026-07-28 14:20:21 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv started.
+2026-07-28 14:20:21 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+2026-07-28 14:20:22 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv | Shape=(225745, 79)
+2026-07-28 14:20:22 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv completed in 0.9902 seconds.
+2026-07-28 14:20:23 | INFO     | AdaptiveRL | Combined dataset shape=(2830743, 79)
+2026-07-28 14:22:03 | INFO     | AdaptiveRL | Replacing Infinite Values started.
+2026-07-28 14:22:06 | INFO     | AdaptiveRL | Replacing Infinite Values completed in 2.4769 seconds.
+2026-07-28 14:22:06 | INFO     | AdaptiveRL | Removing Duplicates started.
+2026-07-28 14:22:17 | INFO     | AdaptiveRL | Removed 308381 duplicate rows.
+2026-07-28 14:22:17 | INFO     | AdaptiveRL | Removing Duplicates completed in 11.4410 seconds.
+2026-07-28 14:22:17 | INFO     | AdaptiveRL | Removing Missing Values started.
+2026-07-28 14:22:18 | INFO     | AdaptiveRL | Removed 1564 rows containing missing values.
+2026-07-28 14:22:18 | INFO     | AdaptiveRL | Removing Missing Values completed in 0.8409 seconds.
+2026-07-28 14:22:18 | INFO     | AdaptiveRL | Removing Constant Columns started.
+2026-07-28 14:22:20 | INFO     | AdaptiveRL | Removed 8 constant columns.
+2026-07-28 14:22:20 | INFO     | AdaptiveRL | Removing Constant Columns completed in 1.9268 seconds.
+2026-07-28 14:22:20 | INFO     | AdaptiveRL | Cleaning completed. Final shape: (2520798, 71)
+2026-07-28 14:22:39 | INFO     | AdaptiveRL | Encoding Dataset started.
+2026-07-28 14:22:40 | INFO     | AdaptiveRL | Encoding Dataset completed in 0.3430 seconds.
+2026-07-28 14:22:40 | INFO     | AdaptiveRL | Encoding completed.
+2026-07-28 14:22:54 | INFO     | AdaptiveRL | Scaler (standard) fitted on 70 feature columns.
+2026-07-28 14:22:56 | INFO     | AdaptiveRL | Scaling Dataset started.
+2026-07-28 14:22:58 | INFO     | AdaptiveRL | Scaling Dataset completed in 2.4052 seconds.
+2026-07-28 14:22:58 | INFO     | AdaptiveRL | Scaling completed.
+2026-07-28 14:24:48 | INFO     | src.models.local_outlier_factor | Local Outlier Factor initialized.
+2026-07-28 14:24:55 | INFO     | src.models.local_outlier_factor | Training Local Outlier Factor...
+2026-07-28 14:34:29 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 14:34:29 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Monday-WorkingHours.pcap_ISCX.csv
+2026-07-28 14:34:32 | INFO     | AdaptiveRL | Loaded Monday-WorkingHours.pcap_ISCX.csv | Shape=(529918, 79)
+2026-07-28 14:34:32 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv completed in 2.5927 seconds.
+2026-07-28 14:34:32 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 14:34:32 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Tuesday-WorkingHours.pcap_ISCX.csv
+2026-07-28 14:34:34 | INFO     | AdaptiveRL | Loaded Tuesday-WorkingHours.pcap_ISCX.csv | Shape=(445909, 79)
+2026-07-28 14:34:34 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv completed in 1.9624 seconds.
+2026-07-28 14:34:34 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv started.
+2026-07-28 14:34:34 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Wednesday-workingHours.pcap_ISCX.csv
+2026-07-28 14:34:37 | INFO     | AdaptiveRL | Loaded Wednesday-workingHours.pcap_ISCX.csv | Shape=(692703, 79)
+2026-07-28 14:34:37 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv completed in 3.1047 seconds.
+2026-07-28 14:34:37 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv started.
+2026-07-28 14:34:37 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv
+2026-07-28 14:34:38 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv | Shape=(170366, 79)
+2026-07-28 14:34:38 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv completed in 0.6936 seconds.
+2026-07-28 14:34:38 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv started.
+2026-07-28 14:34:38 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv
+2026-07-28 14:34:39 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv | Shape=(288602, 79)
+2026-07-28 14:34:39 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv completed in 1.0514 seconds.
+2026-07-28 14:34:39 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv started.
+2026-07-28 14:34:39 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Morning.pcap_ISCX.csv
+2026-07-28 14:34:39 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Morning.pcap_ISCX.csv | Shape=(191033, 79)
+2026-07-28 14:34:39 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv completed in 0.7483 seconds.
+2026-07-28 14:34:39 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv started.
+2026-07-28 14:34:39 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+2026-07-28 14:34:41 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv | Shape=(286467, 79)
+2026-07-28 14:34:41 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv completed in 1.0859 seconds.
+2026-07-28 14:34:41 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv started.
+2026-07-28 14:34:41 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+2026-07-28 14:34:41 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv | Shape=(225745, 79)
+2026-07-28 14:34:41 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv completed in 0.9264 seconds.
+2026-07-28 14:34:43 | INFO     | AdaptiveRL | Combined dataset shape=(2830743, 79)
+2026-07-28 14:35:03 | INFO     | AdaptiveRL | Replacing Infinite Values started.
+2026-07-28 14:35:06 | INFO     | AdaptiveRL | Replacing Infinite Values completed in 2.7989 seconds.
+2026-07-28 14:35:06 | INFO     | AdaptiveRL | Removing Duplicates started.
+2026-07-28 14:35:17 | INFO     | AdaptiveRL | Removed 308381 duplicate rows.
+2026-07-28 14:35:17 | INFO     | AdaptiveRL | Removing Duplicates completed in 11.2685 seconds.
+2026-07-28 14:35:17 | INFO     | AdaptiveRL | Removing Missing Values started.
+2026-07-28 14:35:18 | INFO     | AdaptiveRL | Removed 1564 rows containing missing values.
+2026-07-28 14:35:18 | INFO     | AdaptiveRL | Removing Missing Values completed in 0.7978 seconds.
+2026-07-28 14:35:18 | INFO     | AdaptiveRL | Removing Constant Columns started.
+2026-07-28 14:35:20 | INFO     | AdaptiveRL | Removed 8 constant columns.
+2026-07-28 14:35:20 | INFO     | AdaptiveRL | Removing Constant Columns completed in 1.8999 seconds.
+2026-07-28 14:35:20 | INFO     | AdaptiveRL | Cleaning completed. Final shape: (2520798, 71)
+2026-07-28 14:35:32 | INFO     | AdaptiveRL | Encoding Dataset started.
+2026-07-28 14:35:32 | INFO     | AdaptiveRL | Encoding Dataset completed in 0.3005 seconds.
+2026-07-28 14:35:32 | INFO     | AdaptiveRL | Encoding completed.
+2026-07-28 14:35:36 | INFO     | AdaptiveRL | Scaler (standard) fitted on 70 feature columns.
+2026-07-28 14:35:37 | INFO     | AdaptiveRL | Scaling Dataset started.
+2026-07-28 14:35:40 | INFO     | AdaptiveRL | Scaling Dataset completed in 2.6242 seconds.
+2026-07-28 14:35:40 | INFO     | AdaptiveRL | Scaling completed.
+2026-07-28 14:39:24 | INFO     | src.models.local_outlier_factor | Local Outlier Factor initialized.
+2026-07-28 14:39:28 | INFO     | src.models.local_outlier_factor | Training Local Outlier Factor...
+2026-07-28 14:39:34 | INFO     | src.models.local_outlier_factor | Training completed.
+2026-07-28 14:40:39 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 14:40:39 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Monday-WorkingHours.pcap_ISCX.csv
+2026-07-28 14:40:42 | INFO     | AdaptiveRL | Loaded Monday-WorkingHours.pcap_ISCX.csv | Shape=(529918, 79)
+2026-07-28 14:40:42 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv completed in 2.5842 seconds.
+2026-07-28 14:40:42 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 14:40:42 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Tuesday-WorkingHours.pcap_ISCX.csv
+2026-07-28 14:40:44 | INFO     | AdaptiveRL | Loaded Tuesday-WorkingHours.pcap_ISCX.csv | Shape=(445909, 79)
+2026-07-28 14:40:44 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv completed in 1.9046 seconds.
+2026-07-28 14:40:44 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv started.
+2026-07-28 14:40:44 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Wednesday-workingHours.pcap_ISCX.csv
+2026-07-28 14:40:47 | INFO     | AdaptiveRL | Loaded Wednesday-workingHours.pcap_ISCX.csv | Shape=(692703, 79)
+2026-07-28 14:40:47 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv completed in 3.0064 seconds.
+2026-07-28 14:40:47 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv started.
+2026-07-28 14:40:47 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv
+2026-07-28 14:40:48 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv | Shape=(170366, 79)
+2026-07-28 14:40:48 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv completed in 0.6292 seconds.
+2026-07-28 14:40:48 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv started.
+2026-07-28 14:40:48 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv
+2026-07-28 14:40:49 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv | Shape=(288602, 79)
+2026-07-28 14:40:49 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv completed in 0.9654 seconds.
+2026-07-28 14:40:49 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv started.
+2026-07-28 14:40:49 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Morning.pcap_ISCX.csv
+2026-07-28 14:40:49 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Morning.pcap_ISCX.csv | Shape=(191033, 79)
+2026-07-28 14:40:49 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv completed in 0.7215 seconds.
+2026-07-28 14:40:49 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv started.
+2026-07-28 14:40:49 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+2026-07-28 14:40:50 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv | Shape=(286467, 79)
+2026-07-28 14:40:50 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv completed in 1.0480 seconds.
+2026-07-28 14:40:50 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv started.
+2026-07-28 14:40:50 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+2026-07-28 14:40:51 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv | Shape=(225745, 79)
+2026-07-28 14:40:51 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv completed in 0.9246 seconds.
+2026-07-28 14:40:53 | INFO     | AdaptiveRL | Combined dataset shape=(2830743, 79)
+2026-07-28 14:40:59 | INFO     | AdaptiveRL | Replacing Infinite Values started.
+2026-07-28 14:41:01 | INFO     | AdaptiveRL | Replacing Infinite Values completed in 2.3127 seconds.
+2026-07-28 14:41:01 | INFO     | AdaptiveRL | Removing Duplicates started.
+2026-07-28 14:41:11 | INFO     | AdaptiveRL | Removed 308381 duplicate rows.
+2026-07-28 14:41:11 | INFO     | AdaptiveRL | Removing Duplicates completed in 11.0631 seconds.
+2026-07-28 14:41:11 | INFO     | AdaptiveRL | Removing Missing Values started.
+2026-07-28 14:41:12 | INFO     | AdaptiveRL | Removed 1564 rows containing missing values.
+2026-07-28 14:41:12 | INFO     | AdaptiveRL | Removing Missing Values completed in 0.6530 seconds.
+2026-07-28 14:41:12 | INFO     | AdaptiveRL | Removing Constant Columns started.
+2026-07-28 14:41:14 | INFO     | AdaptiveRL | Removed 8 constant columns.
+2026-07-28 14:41:14 | INFO     | AdaptiveRL | Removing Constant Columns completed in 1.9016 seconds.
+2026-07-28 14:41:14 | INFO     | AdaptiveRL | Cleaning completed. Final shape: (2520798, 71)
+2026-07-28 14:42:23 | INFO     | AdaptiveRL | Encoding Dataset started.
+2026-07-28 14:42:24 | INFO     | AdaptiveRL | Encoding Dataset completed in 0.3137 seconds.
+2026-07-28 14:42:24 | INFO     | AdaptiveRL | Encoding completed.
+2026-07-28 14:42:28 | INFO     | AdaptiveRL | Scaler (standard) fitted on 70 feature columns.
+2026-07-28 14:42:29 | INFO     | AdaptiveRL | Scaling Dataset started.
+2026-07-28 14:42:31 | INFO     | AdaptiveRL | Scaling Dataset completed in 2.7145 seconds.
+2026-07-28 14:42:31 | INFO     | AdaptiveRL | Scaling completed.
+2026-07-28 14:42:35 | INFO     | src.models.local_outlier_factor | Local Outlier Factor initialized.
+2026-07-28 14:44:22 | INFO     | src.models.local_outlier_factor | Local Outlier Factor initialized.
+2026-07-28 14:44:25 | WARNING  | src.models.local_outlier_factor | Sampling 500000 rows for Local Outlier Factor training.
+2026-07-28 14:44:25 | INFO     | src.models.local_outlier_factor | Training Local Outlier Factor...
+2026-07-28 14:46:01 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 14:46:01 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Monday-WorkingHours.pcap_ISCX.csv
+2026-07-28 14:46:03 | INFO     | AdaptiveRL | Loaded Monday-WorkingHours.pcap_ISCX.csv | Shape=(529918, 79)
+2026-07-28 14:46:03 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv completed in 2.5824 seconds.
+2026-07-28 14:46:03 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 14:46:03 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Tuesday-WorkingHours.pcap_ISCX.csv
+2026-07-28 14:46:05 | INFO     | AdaptiveRL | Loaded Tuesday-WorkingHours.pcap_ISCX.csv | Shape=(445909, 79)
+2026-07-28 14:46:05 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv completed in 2.0153 seconds.
+2026-07-28 14:46:05 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv started.
+2026-07-28 14:46:05 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Wednesday-workingHours.pcap_ISCX.csv
+2026-07-28 14:46:09 | INFO     | AdaptiveRL | Loaded Wednesday-workingHours.pcap_ISCX.csv | Shape=(692703, 79)
+2026-07-28 14:46:09 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv completed in 3.1328 seconds.
+2026-07-28 14:46:09 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv started.
+2026-07-28 14:46:09 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv
+2026-07-28 14:46:09 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv | Shape=(170366, 79)
+2026-07-28 14:46:09 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv completed in 0.6249 seconds.
+2026-07-28 14:46:09 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv started.
+2026-07-28 14:46:09 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv
+2026-07-28 14:46:10 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv | Shape=(288602, 79)
+2026-07-28 14:46:10 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv completed in 0.9500 seconds.
+2026-07-28 14:46:10 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv started.
+2026-07-28 14:46:10 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Morning.pcap_ISCX.csv
+2026-07-28 14:46:11 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Morning.pcap_ISCX.csv | Shape=(191033, 79)
+2026-07-28 14:46:11 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv completed in 0.6727 seconds.
+2026-07-28 14:46:11 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv started.
+2026-07-28 14:46:11 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+2026-07-28 14:46:12 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv | Shape=(286467, 79)
+2026-07-28 14:46:12 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv completed in 1.0349 seconds.
+2026-07-28 14:46:12 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv started.
+2026-07-28 14:46:12 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+2026-07-28 14:46:13 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv | Shape=(225745, 79)
+2026-07-28 14:46:13 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv completed in 0.8902 seconds.
+2026-07-28 14:46:14 | INFO     | AdaptiveRL | Combined dataset shape=(2830743, 79)
+2026-07-28 14:46:25 | INFO     | AdaptiveRL | Replacing Infinite Values started.
+2026-07-28 14:46:27 | INFO     | AdaptiveRL | Replacing Infinite Values completed in 2.4501 seconds.
+2026-07-28 14:46:27 | INFO     | AdaptiveRL | Removing Duplicates started.
+2026-07-28 14:46:39 | INFO     | AdaptiveRL | Removed 308381 duplicate rows.
+2026-07-28 14:46:39 | INFO     | AdaptiveRL | Removing Duplicates completed in 12.1548 seconds.
+2026-07-28 14:46:39 | INFO     | AdaptiveRL | Removing Missing Values started.
+2026-07-28 14:46:40 | INFO     | AdaptiveRL | Removed 1564 rows containing missing values.
+2026-07-28 14:46:40 | INFO     | AdaptiveRL | Removing Missing Values completed in 0.7436 seconds.
+2026-07-28 14:46:40 | INFO     | AdaptiveRL | Removing Constant Columns started.
+2026-07-28 14:46:42 | INFO     | AdaptiveRL | Removed 8 constant columns.
+2026-07-28 14:46:42 | INFO     | AdaptiveRL | Removing Constant Columns completed in 1.9274 seconds.
+2026-07-28 14:46:42 | INFO     | AdaptiveRL | Cleaning completed. Final shape: (2520798, 71)
+2026-07-28 14:46:48 | INFO     | AdaptiveRL | Encoding Dataset started.
+2026-07-28 14:46:48 | INFO     | AdaptiveRL | Encoding Dataset completed in 0.3200 seconds.
+2026-07-28 14:46:48 | INFO     | AdaptiveRL | Encoding completed.
+2026-07-28 14:46:53 | INFO     | AdaptiveRL | Scaler (standard) fitted on 70 feature columns.
+2026-07-28 14:46:54 | INFO     | AdaptiveRL | Scaling Dataset started.
+2026-07-28 14:46:56 | INFO     | AdaptiveRL | Scaling Dataset completed in 2.7548 seconds.
+2026-07-28 14:46:56 | INFO     | AdaptiveRL | Scaling completed.
+2026-07-28 14:47:03 | INFO     | src.models.local_outlier_factor | Local Outlier Factor initialized.
+2026-07-28 14:47:05 | WARNING  | src.models.local_outlier_factor | Sampling 100000 rows for Local Outlier Factor training.
+2026-07-28 14:47:05 | INFO     | src.models.local_outlier_factor | Training Local Outlier Factor...
+2026-07-28 14:47:12 | INFO     | src.models.local_outlier_factor | Training completed.
+2026-07-28 14:50:49 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 14:50:49 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Monday-WorkingHours.pcap_ISCX.csv
+2026-07-28 14:50:51 | INFO     | AdaptiveRL | Loaded Monday-WorkingHours.pcap_ISCX.csv | Shape=(529918, 79)
+2026-07-28 14:50:51 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv completed in 2.6996 seconds.
+2026-07-28 14:50:51 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 14:50:51 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Tuesday-WorkingHours.pcap_ISCX.csv
+2026-07-28 14:50:54 | INFO     | AdaptiveRL | Loaded Tuesday-WorkingHours.pcap_ISCX.csv | Shape=(445909, 79)
+2026-07-28 14:50:54 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv completed in 2.1857 seconds.
+2026-07-28 14:50:54 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv started.
+2026-07-28 14:50:54 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Wednesday-workingHours.pcap_ISCX.csv
+2026-07-28 14:50:57 | INFO     | AdaptiveRL | Loaded Wednesday-workingHours.pcap_ISCX.csv | Shape=(692703, 79)
+2026-07-28 14:50:57 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv completed in 3.3760 seconds.
+2026-07-28 14:50:57 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv started.
+2026-07-28 14:50:57 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv
+2026-07-28 14:50:58 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv | Shape=(170366, 79)
+2026-07-28 14:50:58 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv completed in 0.7408 seconds.
+2026-07-28 14:50:58 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv started.
+2026-07-28 14:50:58 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv
+2026-07-28 14:50:59 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv | Shape=(288602, 79)
+2026-07-28 14:50:59 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv completed in 1.1303 seconds.
+2026-07-28 14:50:59 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv started.
+2026-07-28 14:50:59 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Morning.pcap_ISCX.csv
+2026-07-28 14:51:00 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Morning.pcap_ISCX.csv | Shape=(191033, 79)
+2026-07-28 14:51:00 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv completed in 0.7947 seconds.
+2026-07-28 14:51:00 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv started.
+2026-07-28 14:51:00 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+2026-07-28 14:51:01 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv | Shape=(286467, 79)
+2026-07-28 14:51:01 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv completed in 1.2044 seconds.
+2026-07-28 14:51:01 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv started.
+2026-07-28 14:51:01 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+2026-07-28 14:51:02 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv | Shape=(225745, 79)
+2026-07-28 14:51:02 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv completed in 1.0761 seconds.
+2026-07-28 14:51:03 | INFO     | AdaptiveRL | Combined dataset shape=(2830743, 79)
+2026-07-28 14:51:04 | INFO     | AdaptiveRL | Replacing Infinite Values started.
+2026-07-28 14:51:07 | INFO     | AdaptiveRL | Replacing Infinite Values completed in 2.2667 seconds.
+2026-07-28 14:51:07 | INFO     | AdaptiveRL | Removing Duplicates started.
+2026-07-28 14:51:18 | INFO     | AdaptiveRL | Removed 308381 duplicate rows.
+2026-07-28 14:51:18 | INFO     | AdaptiveRL | Removing Duplicates completed in 12.0986 seconds.
+2026-07-28 14:51:18 | INFO     | AdaptiveRL | Removing Missing Values started.
+2026-07-28 14:51:19 | INFO     | AdaptiveRL | Removed 1564 rows containing missing values.
+2026-07-28 14:51:19 | INFO     | AdaptiveRL | Removing Missing Values completed in 0.8831 seconds.
+2026-07-28 14:51:19 | INFO     | AdaptiveRL | Removing Constant Columns started.
+2026-07-28 14:51:21 | INFO     | AdaptiveRL | Removed 8 constant columns.
+2026-07-28 14:51:21 | INFO     | AdaptiveRL | Removing Constant Columns completed in 2.0089 seconds.
+2026-07-28 14:51:21 | INFO     | AdaptiveRL | Cleaning completed. Final shape: (2520798, 71)
+2026-07-28 14:51:25 | INFO     | AdaptiveRL | Encoding Dataset started.
+2026-07-28 14:51:26 | INFO     | AdaptiveRL | Encoding Dataset completed in 0.2843 seconds.
+2026-07-28 14:51:26 | INFO     | AdaptiveRL | Encoding completed.
+2026-07-28 14:51:30 | INFO     | AdaptiveRL | Scaler (standard) fitted on 70 feature columns.
+2026-07-28 14:51:31 | INFO     | AdaptiveRL | Scaling Dataset started.
+2026-07-28 14:51:34 | INFO     | AdaptiveRL | Scaling Dataset completed in 3.2063 seconds.
+2026-07-28 14:51:34 | INFO     | AdaptiveRL | Scaling completed.
+2026-07-28 14:51:39 | INFO     | src.models.local_outlier_factor | Local Outlier Factor initialized.
+2026-07-28 14:51:43 | WARNING  | src.models.local_outlier_factor | Sampling 100000 rows for Local Outlier Factor training.
+2026-07-28 14:51:43 | INFO     | src.models.local_outlier_factor | Training Local Outlier Factor...
+2026-07-28 14:51:50 | INFO     | src.models.local_outlier_factor | Training completed.
+2026-07-28 14:58:16 | INFO     | src.models.local_outlier_factor | Local Outlier Factor saved -> trained_models/isolation_forest.joblib
+2026-07-28 14:58:56 | INFO     | src.models.local_outlier_factor | Local Outlier Factor saved -> trained_models/local_outlier_factor.joblib
+2026-07-28 15:00:57 | INFO     | src.models.local_outlier_factor | Local Outlier Factor loaded <- trained_models/local_outlier_factor.joblib
+2026-07-28 15:02:38 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 15:02:38 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Monday-WorkingHours.pcap_ISCX.csv
+2026-07-28 15:02:41 | INFO     | AdaptiveRL | Loaded Monday-WorkingHours.pcap_ISCX.csv | Shape=(529918, 79)
+2026-07-28 15:02:41 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv completed in 2.6618 seconds.
+2026-07-28 15:02:41 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 15:02:41 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Tuesday-WorkingHours.pcap_ISCX.csv
+2026-07-28 15:05:54 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 15:05:54 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Monday-WorkingHours.pcap_ISCX.csv
+2026-07-28 15:05:56 | INFO     | AdaptiveRL | Loaded Monday-WorkingHours.pcap_ISCX.csv | Shape=(529918, 79)
+2026-07-28 15:05:56 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv completed in 2.5829 seconds.
+2026-07-28 15:05:56 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 15:05:56 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Tuesday-WorkingHours.pcap_ISCX.csv
+2026-07-28 15:05:58 | INFO     | AdaptiveRL | Loaded Tuesday-WorkingHours.pcap_ISCX.csv | Shape=(445909, 79)
+2026-07-28 15:05:58 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv completed in 1.9650 seconds.
+2026-07-28 15:05:58 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv started.
+2026-07-28 15:05:58 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Wednesday-workingHours.pcap_ISCX.csv
+2026-07-28 15:06:01 | INFO     | AdaptiveRL | Loaded Wednesday-workingHours.pcap_ISCX.csv | Shape=(692703, 79)
+2026-07-28 15:06:01 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv completed in 3.0257 seconds.
+2026-07-28 15:06:01 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv started.
+2026-07-28 15:06:01 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv
+2026-07-28 15:06:01 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv | Shape=(170366, 79)
+2026-07-28 15:06:01 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv completed in 0.6529 seconds.
+2026-07-28 15:06:01 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv started.
+2026-07-28 15:06:01 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv
+2026-07-28 15:06:02 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv | Shape=(288602, 79)
+2026-07-28 15:06:02 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv completed in 1.0050 seconds.
+2026-07-28 15:06:02 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv started.
+2026-07-28 15:06:02 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Morning.pcap_ISCX.csv
+2026-07-28 15:06:03 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Morning.pcap_ISCX.csv | Shape=(191033, 79)
+2026-07-28 15:06:03 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv completed in 0.7439 seconds.
+2026-07-28 15:06:03 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv started.
+2026-07-28 15:06:03 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+2026-07-28 15:06:04 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv | Shape=(286467, 79)
+2026-07-28 15:06:04 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv completed in 1.1629 seconds.
+2026-07-28 15:06:04 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv started.
+2026-07-28 15:06:04 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+2026-07-28 15:06:05 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv | Shape=(225745, 79)
+2026-07-28 15:06:05 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv completed in 0.9957 seconds.
+2026-07-28 15:06:06 | INFO     | AdaptiveRL | Combined dataset shape=(2830743, 79)
+2026-07-28 15:06:10 | INFO     | AdaptiveRL | Replacing Infinite Values started.
+2026-07-28 15:06:12 | INFO     | AdaptiveRL | Replacing Infinite Values completed in 2.4423 seconds.
+2026-07-28 15:06:12 | INFO     | AdaptiveRL | Removing Duplicates started.
+2026-07-28 15:06:23 | INFO     | AdaptiveRL | Removed 308381 duplicate rows.
+2026-07-28 15:06:23 | INFO     | AdaptiveRL | Removing Duplicates completed in 10.9877 seconds.
+2026-07-28 15:06:23 | INFO     | AdaptiveRL | Removing Missing Values started.
+2026-07-28 15:06:24 | INFO     | AdaptiveRL | Removed 1564 rows containing missing values.
+2026-07-28 15:06:24 | INFO     | AdaptiveRL | Removing Missing Values completed in 0.9148 seconds.
+2026-07-28 15:06:24 | INFO     | AdaptiveRL | Removing Constant Columns started.
+2026-07-28 15:06:26 | INFO     | AdaptiveRL | Removed 8 constant columns.
+2026-07-28 15:06:26 | INFO     | AdaptiveRL | Removing Constant Columns completed in 2.0341 seconds.
+2026-07-28 15:06:26 | INFO     | AdaptiveRL | Cleaning completed. Final shape: (2520798, 71)
+2026-07-28 15:06:30 | INFO     | AdaptiveRL | Encoding Dataset started.
+2026-07-28 15:06:31 | INFO     | AdaptiveRL | Encoding Dataset completed in 0.2864 seconds.
+2026-07-28 15:06:31 | INFO     | AdaptiveRL | Encoding completed.
+2026-07-28 15:06:36 | INFO     | AdaptiveRL | Scaler (standard) fitted on 70 feature columns.
+2026-07-28 15:06:37 | INFO     | AdaptiveRL | Scaling Dataset started.
+2026-07-28 15:06:39 | INFO     | AdaptiveRL | Scaling Dataset completed in 2.4900 seconds.
+2026-07-28 15:06:39 | INFO     | AdaptiveRL | Scaling completed.
+2026-07-28 15:06:48 | INFO     | src.models.isolation_forest | Training Isolation Forest...
+2026-07-28 15:06:48 | INFO     | src.models.isolation_forest | Training samples: 2520798
+2026-07-28 15:07:02 | INFO     | src.models.isolation_forest | Isolation Forest training completed.
+2026-07-28 15:07:46 | INFO     | src.models.isolation_forest | Isolation Forest saved -> trained_models/isolation_forest.joblib
+2026-07-28 15:07:49 | INFO     | src.models.isolation_forest | Isolation Forest loaded <- trained_models/isolation_forest.joblib
+2026-07-28 15:08:00 | INFO     | src.models.isolation_forest | Isolation Forest loaded <- trained_models/isolation_forest.joblib
+2026-07-28 15:08:22 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 15:08:22 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Monday-WorkingHours.pcap_ISCX.csv
+2026-07-28 15:08:24 | INFO     | AdaptiveRL | Loaded Monday-WorkingHours.pcap_ISCX.csv | Shape=(529918, 79)
+2026-07-28 15:08:24 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv completed in 2.7628 seconds.
+2026-07-28 15:08:24 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 15:08:24 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Tuesday-WorkingHours.pcap_ISCX.csv
+2026-07-28 15:08:27 | INFO     | AdaptiveRL | Loaded Tuesday-WorkingHours.pcap_ISCX.csv | Shape=(445909, 79)
+2026-07-28 15:08:27 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv completed in 2.1574 seconds.
+2026-07-28 15:08:27 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv started.
+2026-07-28 15:08:27 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Wednesday-workingHours.pcap_ISCX.csv
+2026-07-28 15:08:30 | INFO     | AdaptiveRL | Loaded Wednesday-workingHours.pcap_ISCX.csv | Shape=(692703, 79)
+2026-07-28 15:08:30 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv completed in 3.5467 seconds.
+2026-07-28 15:08:30 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv started.
+2026-07-28 15:08:30 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv
+2026-07-28 15:08:31 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv | Shape=(170366, 79)
+2026-07-28 15:08:31 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv completed in 0.7138 seconds.
+2026-07-28 15:08:31 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv started.
+2026-07-28 15:08:31 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv
+2026-07-28 15:08:32 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv | Shape=(288602, 79)
+2026-07-28 15:08:32 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv completed in 1.0878 seconds.
+2026-07-28 15:08:32 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv started.
+2026-07-28 15:08:32 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Morning.pcap_ISCX.csv
+2026-07-28 15:08:33 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Morning.pcap_ISCX.csv | Shape=(191033, 79)
+2026-07-28 15:08:33 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv completed in 0.7915 seconds.
+2026-07-28 15:08:33 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv started.
+2026-07-28 15:08:33 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+2026-07-28 15:08:34 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv | Shape=(286467, 79)
+2026-07-28 15:08:34 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv completed in 1.1446 seconds.
+2026-07-28 15:08:34 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv started.
+2026-07-28 15:08:34 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+2026-07-28 15:08:35 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv | Shape=(225745, 79)
+2026-07-28 15:08:35 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv completed in 1.0851 seconds.
+2026-07-28 15:08:38 | INFO     | AdaptiveRL | Combined dataset shape=(2830743, 79)
+2026-07-28 15:08:39 | INFO     | AdaptiveRL | Replacing Infinite Values started.
+2026-07-28 15:24:04 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 15:24:04 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Monday-WorkingHours.pcap_ISCX.csv
+2026-07-28 15:24:05 | INFO     | AdaptiveRL | Loaded Monday-WorkingHours.pcap_ISCX.csv | Shape=(529918, 79)
+2026-07-28 15:24:05 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv completed in 1.7582 seconds.
+2026-07-28 15:24:05 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv started.
+2026-07-28 15:24:05 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Tuesday-WorkingHours.pcap_ISCX.csv
+2026-07-28 15:24:07 | INFO     | AdaptiveRL | Loaded Tuesday-WorkingHours.pcap_ISCX.csv | Shape=(445909, 79)
+2026-07-28 15:24:07 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv completed in 1.3242 seconds.
+2026-07-28 15:24:07 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv started.
+2026-07-28 15:24:07 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Wednesday-workingHours.pcap_ISCX.csv
+2026-07-28 15:24:09 | INFO     | AdaptiveRL | Loaded Wednesday-workingHours.pcap_ISCX.csv | Shape=(692703, 79)
+2026-07-28 15:24:09 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv completed in 2.0359 seconds.
+2026-07-28 15:24:09 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv started.
+2026-07-28 15:24:09 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv
+2026-07-28 15:24:09 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv | Shape=(170366, 79)
+2026-07-28 15:24:09 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv completed in 0.4208 seconds.
+2026-07-28 15:24:09 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv started.
+2026-07-28 15:24:09 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv
+2026-07-28 15:24:10 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv | Shape=(288602, 79)
+2026-07-28 15:24:10 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv completed in 0.6356 seconds.
+2026-07-28 15:24:10 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv started.
+2026-07-28 15:24:10 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Morning.pcap_ISCX.csv
+2026-07-28 15:24:10 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Morning.pcap_ISCX.csv | Shape=(191033, 79)
+2026-07-28 15:24:10 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv completed in 0.4582 seconds.
+2026-07-28 15:24:10 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv started.
+2026-07-28 15:24:10 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+2026-07-28 15:24:11 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv | Shape=(286467, 79)
+2026-07-28 15:24:11 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv completed in 0.7137 seconds.
+2026-07-28 15:24:11 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv started.
+2026-07-28 15:24:11 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+2026-07-28 15:24:12 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv | Shape=(225745, 79)
+2026-07-28 15:24:12 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv completed in 0.6261 seconds.
+2026-07-28 15:24:12 | INFO     | AdaptiveRL | Combined dataset shape=(2830743, 79)
+2026-07-28 15:24:14 | INFO     | AdaptiveRL | Replacing Infinite Values started.
+2026-07-28 15:24:15 | INFO     | AdaptiveRL | Replacing Infinite Values completed in 1.4670 seconds.
+2026-07-28 15:24:15 | INFO     | AdaptiveRL | Removing Duplicates started.
+2026-07-28 15:24:23 | INFO     | AdaptiveRL | Removed 308381 duplicate rows.
+2026-07-28 15:24:23 | INFO     | AdaptiveRL | Removing Duplicates completed in 7.6189 seconds.
+2026-07-28 15:24:23 | INFO     | AdaptiveRL | Removing Missing Values started.
+2026-07-28 15:24:24 | INFO     | AdaptiveRL | Removed 1564 rows containing missing values.
+2026-07-28 15:24:24 | INFO     | AdaptiveRL | Removing Missing Values completed in 0.6241 seconds.
+2026-07-28 15:24:24 | INFO     | AdaptiveRL | Removing Constant Columns started.
+2026-07-28 15:24:25 | INFO     | AdaptiveRL | Removed 8 constant columns.
+2026-07-28 15:24:25 | INFO     | AdaptiveRL | Removing Constant Columns completed in 1.3028 seconds.
+2026-07-28 15:24:25 | INFO     | AdaptiveRL | Cleaning completed. Final shape: (2520798, 71)
+2026-07-28 15:24:29 | INFO     | AdaptiveRL | Encoding Dataset started.
+2026-07-28 15:24:29 | INFO     | AdaptiveRL | Encoding Dataset completed in 0.2110 seconds.
+2026-07-28 15:24:29 | INFO     | AdaptiveRL | Encoding completed.
+2026-07-28 15:24:33 | INFO     | AdaptiveRL | Scaler (standard) fitted on 70 feature columns.
+2026-07-28 15:24:34 | INFO     | AdaptiveRL | Scaling Dataset started.
+2026-07-28 15:24:33 | INFO     | AdaptiveRL | Scaling Dataset completed in 1.4222 seconds.
+2026-07-28 15:24:33 | INFO     | AdaptiveRL | Scaling completed.
+2026-07-28 15:24:43 | INFO     | src.models.local_outlier_factor | Local Outlier Factor initialized.
+2026-07-28 15:24:45 | WARNING  | src.models.local_outlier_factor | Sampling 100000 rows for Local Outlier Factor training.
+2026-07-28 15:24:46 | INFO     | src.models.local_outlier_factor | Training Local Outlier Factor...
+2026-07-28 15:24:51 | INFO     | src.models.local_outlier_factor | Training completed.
+2026-07-28 15:25:07 | INFO     | src.models.local_outlier_factor | Local Outlier Factor saved -> trained_models/local_outlier_factor.joblib
+2026-07-28 15:25:58 | INFO     | src.models.local_outlier_factor | Local Outlier Factor loaded <- trained_models/local_outlier_factor.joblib
+2026-07-28 15:27:12 | INFO     | src.models.local_outlier_factor | Local Outlier Factor loaded <- trained_models/local_outlier_factor.joblib
+2026-07-28 15:28:08 | INFO     | src.models.local_outlier_factor | Local Outlier Factor loaded <- trained_models/local_outlier_factor.joblib
+2026-07-30 15:02:00 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv started.
+2026-07-30 15:02:00 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Monday-WorkingHours.pcap_ISCX.csv
+2026-07-30 15:02:03 | INFO     | AdaptiveRL | Loaded Monday-WorkingHours.pcap_ISCX.csv | Shape=(529918, 79)
+2026-07-30 15:02:03 | INFO     | AdaptiveRL | Loading Monday-WorkingHours.pcap_ISCX.csv completed in 2.8785 seconds.
+2026-07-30 15:02:03 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv started.
+2026-07-30 15:02:03 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Tuesday-WorkingHours.pcap_ISCX.csv
+2026-07-30 15:02:05 | INFO     | AdaptiveRL | Loaded Tuesday-WorkingHours.pcap_ISCX.csv | Shape=(445909, 79)
+2026-07-30 15:02:05 | INFO     | AdaptiveRL | Loading Tuesday-WorkingHours.pcap_ISCX.csv completed in 2.1867 seconds.
+2026-07-30 15:02:05 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv started.
+2026-07-30 15:02:05 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Wednesday-workingHours.pcap_ISCX.csv
+2026-07-30 15:02:08 | INFO     | AdaptiveRL | Loaded Wednesday-workingHours.pcap_ISCX.csv | Shape=(692703, 79)
+2026-07-30 15:02:08 | INFO     | AdaptiveRL | Loading Wednesday-workingHours.pcap_ISCX.csv completed in 3.3030 seconds.
+2026-07-30 15:02:08 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv started.
+2026-07-30 15:02:08 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv
+2026-07-30 15:02:09 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv | Shape=(170366, 79)
+2026-07-30 15:02:09 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv completed in 0.7179 seconds.
+2026-07-30 15:02:09 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv started.
+2026-07-30 15:02:09 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv
+2026-07-30 15:02:10 | INFO     | AdaptiveRL | Loaded Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv | Shape=(288602, 79)
+2026-07-30 15:02:10 | INFO     | AdaptiveRL | Loading Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv completed in 1.1234 seconds.
+2026-07-30 15:02:10 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv started.
+2026-07-30 15:02:10 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Morning.pcap_ISCX.csv
+2026-07-30 15:02:11 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Morning.pcap_ISCX.csv | Shape=(191033, 79)
+2026-07-30 15:02:11 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Morning.pcap_ISCX.csv completed in 0.7886 seconds.
+2026-07-30 15:02:11 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv started.
+2026-07-30 15:02:11 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+2026-07-30 15:02:12 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv | Shape=(286467, 79)
+2026-07-30 15:02:12 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv completed in 1.1931 seconds.
+2026-07-30 15:02:12 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv started.
+2026-07-30 15:02:12 | INFO     | AdaptiveRL | Reading /home/kalpe/projects/adaptive_rl_anomaly_detection/datasets/raw/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+2026-07-30 15:02:13 | INFO     | AdaptiveRL | Loaded Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv | Shape=(225745, 79)
+2026-07-30 15:02:13 | INFO     | AdaptiveRL | Loading Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv completed in 0.9750 seconds.
+2026-07-30 15:02:14 | INFO     | AdaptiveRL | Combined dataset shape=(2830743, 79)
+2026-07-30 15:02:23 | INFO     | AdaptiveRL | Replacing Infinite Values started.
+2026-07-30 15:02:25 | INFO     | AdaptiveRL | Replacing Infinite Values completed in 2.6037 seconds.
+2026-07-30 15:02:25 | INFO     | AdaptiveRL | Removing Duplicates started.
+2026-07-30 15:02:36 | INFO     | AdaptiveRL | Removed 308381 duplicate rows.
+2026-07-30 15:02:36 | INFO     | AdaptiveRL | Removing Duplicates completed in 11.5469 seconds.
+2026-07-30 15:02:36 | INFO     | AdaptiveRL | Removing Missing Values started.
+2026-07-30 15:02:37 | INFO     | AdaptiveRL | Removed 1564 rows containing missing values.
+2026-07-30 15:02:37 | INFO     | AdaptiveRL | Removing Missing Values completed in 0.7037 seconds.
+2026-07-30 15:02:37 | INFO     | AdaptiveRL | Removing Constant Columns started.
+2026-07-30 15:02:39 | INFO     | AdaptiveRL | Removed 8 constant columns.
+2026-07-30 15:02:39 | INFO     | AdaptiveRL | Removing Constant Columns completed in 2.1373 seconds.
+2026-07-30 15:02:39 | INFO     | AdaptiveRL | Cleaning completed. Final shape: (2520798, 71)
+2026-07-30 15:03:01 | INFO     | AdaptiveRL | Encoding Dataset started.
+2026-07-30 15:03:01 | INFO     | AdaptiveRL | Encoding Dataset completed in 0.3521 seconds.
+2026-07-30 15:03:01 | INFO     | AdaptiveRL | Encoding completed.
+2026-07-30 15:03:09 | INFO     | AdaptiveRL | Scaler (standard) fitted on 70 feature columns.
+2026-07-30 15:03:10 | INFO     | AdaptiveRL | Scaling Dataset started.
+2026-07-30 15:03:13 | INFO     | AdaptiveRL | Scaling Dataset completed in 2.7388 seconds.
+2026-07-30 15:03:13 | INFO     | AdaptiveRL | Scaling completed.
+2026-07-30 15:06:01 | INFO     | src.models.one_class_svm | One-Class SVM initialized.
+2026-07-30 15:06:31 | WARNING  | src.models.one_class_svm | Dataset contains 2520798 samples. Sampling 50000 rows for One-Class SVM training.
+2026-07-30 15:06:31 | INFO     | src.models.one_class_svm | Training One-Class SVM...
+2026-07-30 15:06:52 | INFO     | src.models.one_class_svm | Training samples: 50000 | Features: 70
+2026-07-30 15:06:52 | INFO     | src.models.one_class_svm | One-Class SVM training completed successfully.
+2026-07-30 15:14:09 | INFO     | src.models.one_class_svm | One-Class SVM saved -> trained_models/one_class_svm.joblib
+2026-07-30 15:14:16 | INFO     | src.models.one_class_svm | One-Class SVM loaded <- trained_models/one_class_svm.joblib
 
 ```
 
@@ -1011,6 +1519,8 @@ The following files were not included in the text content:
 The following files were not included in the text content:
 
 - `notebooks/trained_models/isolation_forest.joblib`
+- `notebooks/trained_models/local_outlier_factor.joblib`
+- `notebooks/trained_models/one_class_svm.joblib`
 
 ## 🚫 Binary/Excluded Files
 
@@ -1033,6 +1543,7 @@ The following files were not included in the text content:
 - `notebooks/15_base_model.ipynb`
 - `notebooks/16_Isolation_Forest.ipynb`
 - `notebooks/17_local_outlier_factor.ipynb.ipynb`
+- `notebooks/18_one_class_svm.ipynb`
 
 ## 🚫 Binary/Excluded Files
 
@@ -1047,6 +1558,8 @@ The following files were not included in the text content:
 - `src/config/__pycache__/__init__.cpython-312.pyc`
 - `src/config/__pycache__/config.cpython-312.pyc`
 - `src/config/__pycache__/isolation_forest_config.cpython-312.pyc`
+- `src/config/__pycache__/local_outlier_factor_config.cpython-312.pyc`
+- `src/config/__pycache__/one_class_svm_config.cpython-312.pyc`
 
 ### <a id="📄-src-config-init-py"></a>📄 `src/config/__init__.py`
 
@@ -1325,18 +1838,18 @@ class IsolationForestConfig:
 
 ---
 
-### <a id="📄-src-config-local-outlier-factor-config-py-py"></a>📄 `src/config/local_outlier_factor_config.py.py`
+### <a id="📄-src-config-local-outlier-factor-config-py"></a>📄 `src/config/local_outlier_factor_config.py`
 
 **File Info:**
-- **Size**: 1.26 KB
+- **Size**: 1.33 KB
 - **Extension**: `.py`
 - **Language**: `python`
-- **Location**: `src/config/local_outlier_factor_config.py.py`
+- **Location**: `src/config/local_outlier_factor_config.py`
 - **Relative Path**: `src/config`
-- **Created**: 2026-07-26 15:34:16 (Asia/Calcutta / GMT+06:30)
-- **Modified**: 2026-07-26 15:34:16 (Asia/Calcutta / GMT+06:30)
-- **MD5**: `22f9ec3ff2aa71cd6804c2924418308e`
-- **SHA256**: `b550aea87c8eca4de8efb0a163e7f87864b438e0f3413c9e2f383b63399b2b55`
+- **Created**: 2026-07-30 15:43:00 (Asia/Calcutta / GMT+06:30)
+- **Modified**: 2026-07-30 15:43:00 (Asia/Calcutta / GMT+06:30)
+- **MD5**: `33bfc87d5a7c5d79a87657166b00b1b5`
+- **SHA256**: `57f2bfb8c5a77233224910e370b52234ea4f0f8286704455641720e8545eb23f`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -1405,7 +1918,71 @@ class LocalOutlierFactorConfig:
 
     novelty: bool = True
 
+
+    random_state: int = 42
+
     n_jobs: int = -1
+
+    max_training_samples: int = 100000
+
+
+```
+
+---
+
+### <a id="📄-src-config-one-class-svm-config-py"></a>📄 `src/config/one_class_svm_config.py`
+
+**File Info:**
+- **Size**: 528 B
+- **Extension**: `.py`
+- **Language**: `python`
+- **Location**: `src/config/one_class_svm_config.py`
+- **Relative Path**: `src/config`
+- **Created**: 2026-07-30 15:36:44 (Asia/Calcutta / GMT+06:30)
+- **Modified**: 2026-07-30 15:36:44 (Asia/Calcutta / GMT+06:30)
+- **MD5**: `d598f56b72c653bcaa236df9e82ca987`
+- **SHA256**: `b241fc4ea57b7f837d2e9d5e3758726abed678b993f879ddbacb2910ab56b73d`
+- **Encoding**: ASCII
+
+**File code content:**
+
+```python
+"""
+Configuration for the One-Class SVM anomaly detection model.
+"""
+
+from dataclasses import dataclass
+
+
+@dataclass(slots=True)
+class OneClassSVMConfig:
+    """
+    Configuration for One-Class SVM.
+    """
+
+    kernel: str = "rbf"
+
+    degree: int = 3
+
+    gamma: str | float = "scale"
+
+    coef0: float = 0.0
+
+    tol: float = 1e-3
+
+    nu: float = 0.05
+
+    shrinking: bool = True
+
+    cache_size: int = 200
+
+    verbose: bool = False
+
+    max_iter: int = -1
+
+    random_state: int = 42
+
+    max_training_samples: int = 50000
 ```
 
 ---
@@ -2128,19 +2705,21 @@ The following files were not included in the text content:
 - `src/models/__pycache__/__init__.cpython-312.pyc`
 - `src/models/__pycache__/base_model.cpython-312.pyc`
 - `src/models/__pycache__/isolation_forest.cpython-312.pyc`
+- `src/models/__pycache__/local_outlier_factor.cpython-312.pyc`
+- `src/models/__pycache__/one_class_svm.cpython-312.pyc`
 
 ### <a id="📄-src-models-init-py"></a>📄 `src/models/__init__.py`
 
 **File Info:**
-- **Size**: 311 B
+- **Size**: 315 B
 - **Extension**: `.py`
 - **Language**: `python`
 - **Location**: `src/models/__init__.py`
 - **Relative Path**: `src/models`
-- **Created**: 2026-07-26 15:38:38 (Asia/Calcutta / GMT+06:30)
-- **Modified**: 2026-07-26 15:38:38 (Asia/Calcutta / GMT+06:30)
-- **MD5**: `4f043009ee84845060872f879274ce82`
-- **SHA256**: `9a02db8d36a7d5c58c3b2af9187ab4561a9cf6e8f1eed695f02a658fdfb1d1b3`
+- **Created**: 2026-07-30 15:36:44 (Asia/Calcutta / GMT+06:30)
+- **Modified**: 2026-07-30 15:36:44 (Asia/Calcutta / GMT+06:30)
+- **MD5**: `489c3e032bc4d49c9c031104ea7a3eb1`
+- **SHA256**: `e1fe8cd6d680d62f1bb4fe7481ee52b5160e500a920f3d79588437a1268c192e`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -2150,16 +2729,18 @@ The following files were not included in the text content:
 Machine Learning Models.
 """
 
-from .base_model import BaseAnomalyModel, ModelMetadata
-from .isolation_forest import IsolationForestModel, IsolationForestConfig
+from .isolation_forest import IsolationForestModel
+from .local_outlier_factor import LocalOutlierFactorModel
+
+
+from ..config.isolation_forest_config import IsolationForestConfig
 
 __all__ = [
-    "BaseAnomalyModel",
-    "ModelMetadata",
     "IsolationForestModel",
     "IsolationForestConfig",
     "LocalOutlierFactorModel",
 ]
+
 ```
 
 ---
@@ -2615,15 +3196,15 @@ class IsolationForestModel(BaseAnomalyModel):
 ### <a id="📄-src-models-local-outlier-factor-py"></a>📄 `src/models/local_outlier_factor.py`
 
 **File Info:**
-- **Size**: 3 KB
+- **Size**: 4.1 KB
 - **Extension**: `.py`
 - **Language**: `python`
 - **Location**: `src/models/local_outlier_factor.py`
 - **Relative Path**: `src/models`
-- **Created**: 2026-07-26 15:36:30 (Asia/Calcutta / GMT+06:30)
-- **Modified**: 2026-07-26 15:36:30 (Asia/Calcutta / GMT+06:30)
-- **MD5**: `21d0ad605b725c315683b4046154e387`
-- **SHA256**: `e43da6962431d65c9c10e84b77a02c71e6368264d5dbc9bb98e30de5ecd53716`
+- **Created**: 2026-07-30 15:36:44 (Asia/Calcutta / GMT+06:30)
+- **Modified**: 2026-07-30 15:36:44 (Asia/Calcutta / GMT+06:30)
+- **MD5**: `fd0e7f9ba059fd78bdff23fc5e5de21f`
+- **SHA256**: `69ea11834291dbb8625344c524d4d9836c7ec6e9922aa768814ddcdd39cfe33a`
 - **Encoding**: ASCII
 
 **File code content:**
@@ -2664,11 +3245,14 @@ class LocalOutlierFactorModel(BaseAnomalyModel):
         self,
         config: LocalOutlierFactorConfig,
     ) -> None:
-        super().__init__()
+        super().__init__(
+            model_name="LocalOutlierFactor",
+            random_state=config.random_state,
+        )
 
         self.config = config
 
-        self.model = LocalOutlierFactor(
+        self._model = LocalOutlierFactor(
             n_neighbors=config.n_neighbors,
             algorithm=config.algorithm,
             leaf_size=config.leaf_size,
@@ -2681,23 +3265,38 @@ class LocalOutlierFactorModel(BaseAnomalyModel):
 
         logger.info("Local Outlier Factor initialized.")
 
-    def fit(
-        self,
-        X,
-    ) -> None:
+    def fit(self, X, y=None):
         """
         Train the LOF model.
         """
 
         X = self._validate_input(X)
+        if len(X) > self.config.max_training_samples:
+            logger.warning(
+                "Sampling %d rows for Local Outlier Factor training.",
+                self.config.max_training_samples,
+            )
+        
+            rng = np.random.default_rng(self.config.random_state)
+        
+            indices = rng.choice(
+                len(X),
+                self.config.max_training_samples,
+                replace=False,
+            )
+        
+            X = X[indices]
 
         logger.info("Training Local Outlier Factor...")
 
-        self.model.fit(X)
+        self._model.fit(X, y)
+        self.training_samples = X.shape[0]
+        self.training_features = X.shape[1]
 
-        self.is_fitted = True
+        self._set_fitted(True)
 
         logger.info("Training completed.")
+        return self
 
     def predict(
         self,
@@ -2719,7 +3318,7 @@ class LocalOutlierFactorModel(BaseAnomalyModel):
 
         X = self._validate_input(X)
 
-        predictions = self.model.predict(X)
+        predictions = self._model.predict(X)
 
         predictions = np.where(
             predictions == -1,
@@ -2743,9 +3342,18 @@ class LocalOutlierFactorModel(BaseAnomalyModel):
 
         X = self._validate_input(X)
 
-        scores = -self.model.decision_function(X)
+        scores = -self._model.decision_function(X)
 
         return scores
+
+    @property
+    def estimator(self) -> LocalOutlierFactor:
+        """
+        Return the underlying sklearn estimator.
+        """
+        return self._model
+        
+    
 
     def save(
         self,
@@ -2785,6 +3393,14 @@ class LocalOutlierFactorModel(BaseAnomalyModel):
         )
 
         return model
+
+    def __repr__(self) -> str:
+        return (
+            f"{self.__class__.__name__}("
+            f"n_neighbors={self.config.n_neighbors}, "
+            f"contamination={self.config.contamination}, "
+            f"novelty={self.config.novelty})"
+        )
 ```
 
 ---
@@ -2814,21 +3430,218 @@ class LocalOutlierFactorModel(BaseAnomalyModel):
 ### <a id="📄-src-models-one-class-svm-py"></a>📄 `src/models/one_class_svm.py`
 
 **File Info:**
-- **Size**: 0 B
+- **Size**: 4.25 KB
 - **Extension**: `.py`
 - **Language**: `python`
 - **Location**: `src/models/one_class_svm.py`
 - **Relative Path**: `src/models`
-- **Created**: 2026-07-26 06:19:37 (Asia/Calcutta / GMT+06:30)
-- **Modified**: 2026-07-26 06:19:37 (Asia/Calcutta / GMT+06:30)
-- **MD5**: `d41d8cd98f00b204e9800998ecf8427e`
-- **SHA256**: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- **Created**: 2026-07-30 15:36:44 (Asia/Calcutta / GMT+06:30)
+- **Modified**: 2026-07-30 15:36:44 (Asia/Calcutta / GMT+06:30)
+- **MD5**: `71e59b8f07bcbe948d2f7d2082de595b`
+- **SHA256**: `6ead7062317fbb395361683a656d10a26aaac4b6df4e3717382d6fb91aa30d29`
 - **Encoding**: ASCII
 
 **File code content:**
 
 ```python
+"""
+One-Class SVM anomaly detection model.
+"""
 
+from __future__ import annotations
+
+from pathlib import Path
+
+import numpy as np
+from sklearn.svm import OneClassSVM
+
+from src.config.one_class_svm_config import OneClassSVMConfig
+from src.models.base_model import BaseAnomalyModel
+from src.utils.logger import get_logger
+
+logger = get_logger(__name__)
+
+
+class OneClassSVMModel(BaseAnomalyModel):
+    """
+    Wrapper around sklearn's One-Class SVM.
+
+    The wrapper provides a unified interface for all anomaly
+    detection models in the framework.
+
+    Predictions
+    ----------
+    0 -> Normal
+    1 -> Anomaly
+    """
+
+    def __init__(
+        self,
+        config: OneClassSVMConfig,
+    ) -> None:
+        super().__init__(
+            model_name="OneClassSVM",
+            random_state=config.random_state,
+        )
+
+        self.config = config
+
+        self._model = OneClassSVM(
+            kernel=config.kernel,
+            degree=config.degree,
+            gamma=config.gamma,
+            coef0=config.coef0,
+            tol=config.tol,
+            nu=config.nu,
+            shrinking=config.shrinking,
+            cache_size=config.cache_size,
+            verbose=config.verbose,
+            max_iter=config.max_iter,
+        )
+
+        logger.info("One-Class SVM initialized.")
+
+    def fit(self, X: np.ndarray, y: np.ndarray | None = None)-> "OneClassSVMModel":
+        """
+        Train the One-Class SVM model.
+        """
+
+        X = self._validate_input(X)
+
+        if len(X) > self.config.max_training_samples:
+            logger.warning(
+                "Dataset contains %d samples. "
+                "Sampling %d rows for One-Class SVM training.",
+                len(X),
+                self.config.max_training_samples,
+            )
+
+            rng = np.random.default_rng(self.config.random_state)
+
+            indices = rng.choice(
+                len(X),
+                self.config.max_training_samples,
+                replace=False,
+            )
+
+            X = X[indices]
+
+        logger.info("Training One-Class SVM...")
+
+        self._model.fit(X, y)
+        self.training_samples = X.shape[0]
+        self.training_features = X.shape[1]
+        logger.info(
+            "Training samples: %d | Features: %d",
+            self.training_samples,
+            self.training_features,
+        )
+
+        self._set_fitted(True)
+
+        logger.info("One-Class SVM training completed successfully.")
+        return self
+
+    def predict(
+        self,
+        X,
+    ) -> np.ndarray:
+        """
+        Predict anomalies.
+
+        Returns
+        -------
+        ndarray
+
+        0 -> Normal
+        1 -> Anomaly
+        """
+
+        self._check_is_fitted()
+
+        X = self._validate_input(X)
+
+        predictions = self._model.predict(X)
+
+        predictions = np.where(
+            predictions == -1,
+            1,
+            0,
+        )
+
+        return predictions
+
+    def anomaly_score(
+        self,
+        X,
+    ) -> np.ndarray:
+        """
+        Compute anomaly scores.
+
+        Larger score means more anomalous.
+        """
+
+        self._check_is_fitted()
+
+        X = self._validate_input(X)
+
+        scores = -self._model.decision_function(X)
+
+        return scores
+
+    @property
+    def estimator(self) -> OneClassSVM:
+        """
+        Return the underlying sklearn estimator.
+        """
+        return self._model
+
+    def save(
+        self,
+        filepath: str | Path,
+    ) -> None:
+        """
+        Save trained model.
+        """
+
+        super().save(filepath)
+
+        logger.info(
+            "One-Class SVM saved -> %s",
+            filepath,
+        )
+
+    @classmethod
+    def load(
+        cls,
+        filepath: str | Path,
+    ) -> "OneClassSVMModel":
+        """
+        Load a previously saved model.
+        """
+
+        model = super().load(filepath)
+
+        if not isinstance(model, cls):
+            raise TypeError(
+                f"Expected {cls.__name__}, "
+                f"got {type(model).__name__}."
+            )
+
+        logger.info(
+            "One-Class SVM loaded <- %s",
+            filepath,
+        )
+
+        return model
+
+    def __repr__(self) -> str:
+        return (
+            f"{self.__class__.__name__}("
+            f"kernel={self.config.kernel}, "
+            f"nu={self.config.nu}, "
+            f"gamma={self.config.gamma})"
+        )
 ```
 
 ---
@@ -4119,4 +4932,10 @@ fi
 ```
 
 ---
+
+## 🚫 Binary/Excluded Files
+
+The following files were not included in the text content:
+
+- `nohup.out`
 

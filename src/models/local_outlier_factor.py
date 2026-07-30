@@ -33,11 +33,14 @@ class LocalOutlierFactorModel(BaseAnomalyModel):
         self,
         config: LocalOutlierFactorConfig,
     ) -> None:
-        super().__init__()
+        super().__init__(
+            model_name="LocalOutlierFactor",
+            random_state=config.random_state,
+        )
 
         self.config = config
 
-        self.model = LocalOutlierFactor(
+        self._model = LocalOutlierFactor(
             n_neighbors=config.n_neighbors,
             algorithm=config.algorithm,
             leaf_size=config.leaf_size,
@@ -50,23 +53,38 @@ class LocalOutlierFactorModel(BaseAnomalyModel):
 
         logger.info("Local Outlier Factor initialized.")
 
-    def fit(
-        self,
-        X,
-    ) -> None:
+    def fit(self, X, y=None):
         """
         Train the LOF model.
         """
 
         X = self._validate_input(X)
+        if len(X) > self.config.max_training_samples:
+            logger.warning(
+                "Sampling %d rows for Local Outlier Factor training.",
+                self.config.max_training_samples,
+            )
+        
+            rng = np.random.default_rng(self.config.random_state)
+        
+            indices = rng.choice(
+                len(X),
+                self.config.max_training_samples,
+                replace=False,
+            )
+        
+            X = X[indices]
 
         logger.info("Training Local Outlier Factor...")
 
-        self.model.fit(X)
+        self._model.fit(X, y)
+        self.training_samples = X.shape[0]
+        self.training_features = X.shape[1]
 
-        self.is_fitted = True
+        self._set_fitted(True)
 
         logger.info("Training completed.")
+        return self
 
     def predict(
         self,
@@ -88,7 +106,7 @@ class LocalOutlierFactorModel(BaseAnomalyModel):
 
         X = self._validate_input(X)
 
-        predictions = self.model.predict(X)
+        predictions = self._model.predict(X)
 
         predictions = np.where(
             predictions == -1,
@@ -112,9 +130,18 @@ class LocalOutlierFactorModel(BaseAnomalyModel):
 
         X = self._validate_input(X)
 
-        scores = -self.model.decision_function(X)
+        scores = -self._model.decision_function(X)
 
         return scores
+
+    @property
+    def estimator(self) -> LocalOutlierFactor:
+        """
+        Return the underlying sklearn estimator.
+        """
+        return self._model
+        
+    
 
     def save(
         self,
@@ -154,3 +181,11 @@ class LocalOutlierFactorModel(BaseAnomalyModel):
         )
 
         return model
+
+    def __repr__(self) -> str:
+        return (
+            f"{self.__class__.__name__}("
+            f"n_neighbors={self.config.n_neighbors}, "
+            f"contamination={self.config.contamination}, "
+            f"novelty={self.config.novelty})"
+        )
