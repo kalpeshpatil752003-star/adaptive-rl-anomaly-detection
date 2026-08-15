@@ -116,6 +116,11 @@ class RolloutBuffer:
 
         self.returns[: self._size] = self.advantages[: self._size] + self.values[: self._size]
 
+        advantages = self.advantages[: self._size]
+        self.advantages[: self._size] = (advantages - advantages.mean()) / (
+            advantages.std() + 1e-8
+        )
+
     def get_batches(
         self, batch_size: int, rng: Optional[np.random.Generator] = None
     ) -> Generator[dict, None, None]:
@@ -178,7 +183,9 @@ class Actor(nn.Module):
 
     def forward(self, state: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
         mean = self.max_action * torch.tanh(self.net(state))
-        std = torch.exp(self.log_std)
+        std = torch.exp(
+            torch.clamp(self.log_std, -5.0, 2.0)
+        )
         return mean, std
 
     def get_action(
@@ -318,9 +325,6 @@ class PPOAgent:
                 b_log_probs = torch.as_tensor(batch["log_probs"], dtype=torch.float32, device=self.device)
                 b_returns = torch.as_tensor(batch["returns"], dtype=torch.float32, device=self.device)
                 b_advantages = torch.as_tensor(batch["advantages"], dtype=torch.float32, device=self.device)
-
-                # Normalize advantages per mini-batch
-                b_advantages = (b_advantages - b_advantages.mean()) / (b_advantages.std() + 1e-8)
 
                 # Evaluate actions under updated policy
                 new_log_probs, entropy = self.actor.evaluate_action(b_states, b_actions)
