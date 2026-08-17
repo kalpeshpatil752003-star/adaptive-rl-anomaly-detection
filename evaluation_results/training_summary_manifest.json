@@ -1,0 +1,23 @@
+{
+    "project": "Adaptive Reinforcement Learning Anomaly Detection",
+    "stage": "PPO Training",
+    "device": "cuda",
+    "total_timesteps": 100000,
+    "total_updates": 49,
+    "best_checkpoint_path": "/home/kalpe/projects/adaptive_rl_anomaly_detection/checkpoints/rl/best.pt",
+    "best_val_mean_reward": 0.5475940177721358,
+    "best_val_metrics": {
+        "mean_reward": 0.5475940177721358,
+        "total_reward": 110430.0,
+        "n_steps": 201664,
+        "tp": 24192,
+        "tn": 131855,
+        "fp": 35750,
+        "fn": 9867,
+        "precision": 0.4035901371325615,
+        "recall": 0.7102968378402185,
+        "f1": 0.5147179285326752,
+        "roc_auc": 0.8456878633856876,
+        "pr_auc": 0.5488185144803087
+    }
+}

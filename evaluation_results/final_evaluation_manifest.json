@@ -1,0 +1,26 @@
+{
+    "project": "Adaptive Reinforcement Learning Anomaly Detection",
+    "stage": "Test Evaluation",
+    "test_samples": 504160,
+    "checkpoint_evaluated": "/home/kalpe/projects/adaptive_rl_anomaly_detection/checkpoints/rl/best.pt",
+    "metrics": {
+        "accuracy": 0.765491113932085,
+        "precision": 0.37579966962006306,
+        "recall": 0.5877883215107812,
+        "f1": 0.4584753215345718,
+        "roc_auc": 0.7719004065612385,
+        "pr_auc": 0.42522273589066323,
+        "confusion_matrix": {
+            "tn": 335881,
+            "fp": 83131,
+            "fn": 35099,
+            "tp": 50049
+        }
+    },
+    "mean_weights": {
+        "isolation_forest": 0.15631137656270389,
+        "lof": 0.2689377880563327,
+        "ocsvm": 0.309601364940678,
+        "autoencoder": 0.2651494704661075
+    }
+}
